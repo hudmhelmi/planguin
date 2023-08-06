@@ -1,9 +1,11 @@
 {% extends "layout.html" %}
 {% block main %}
 
-<h1>Account Settings</h1>
+<h1 class="my-3">Account Settings</h1>
 
-<h2>Change Username</h2>
+<hr>
+
+<h2 class="my-3">Change Username</h2>
 <form action="/change_user" method="post">
     <div class="mb-3">
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="New Username">
@@ -17,7 +19,9 @@
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
-<h2>Change Password</h2>
+<hr>
+
+<h2 class="my-3">Change Password</h2>
 <form action="/change_pass" method="post">
     <div class="mb-3">
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="new_pass" placeholder="New Password">
