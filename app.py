@@ -298,7 +298,7 @@ def change_user():
 
 # Change password
 @app.route("/change_pass", methods=["GET", "POST"])
-def change_user():
+def change_pass():
     if request.method == "POST":
         new_pass, password, password_confirmation = (
             request.form.get("new_pass"),
