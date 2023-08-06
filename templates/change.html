@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block main %}
 
+    <h1>Account Settings</h1>
+
+    <h2>Change Username</h2>
     {% comment %} Change username form {% endcomment %}
     <form action="/change_user" method="post">
         <div class="mb-3">
@@ -15,6 +18,7 @@
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
 
+    <h2>Change Password</h2>
     {% comment %} Change password form {% endcomment %}
     <form action="/change_pass" method="post">
         <div class="mb-3">
