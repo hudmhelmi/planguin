@@ -276,12 +276,7 @@ def change_user():
             return redirect("/change_user")
 
         # Check if username is taken
-        if (
-            db.execute("SELECT username FROM users WHERE username = ?", username)[0][
-                "username"
-            ]
-            != 0
-        ):
+        if len(db.execute("SELECT username FROM users WHERE username = ?", username)) != 0:
             flash("Username is already taken.", "error")
             return redirect("/change_user")
 
