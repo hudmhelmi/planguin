@@ -297,6 +297,43 @@ def change_user():
 
 
 # Change password
+@app.route("/change_pass", methods=["GET", "POST"])
+def change_user():
+    if request.method == "POST":
+        new_pass, password, password_confirmation = (
+            request.form.get("new_pass"),
+            request.form.get("password"),
+            request.form.get("password_confirmation"),
+        )
+
+        if not new_pass or not password or not password_confirmation:
+            flash("Please fill in all fields.", "error")
+            return redirect("/change_pass")
+
+        # Check if passwords are the same
+        if password != password_confirmation:
+            flash("Please enter the same password and confirmation.", "error")
+            return redirect("/change_pass")
+
+        # Check if password is valid
+        hash = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0][
+            "hash"
+        ]
+        if not check_password_hash(hash, password):
+            flash("Please enter the correct password.", "error")
+            return redirect("/change_pass")
+
+        # Update username in database
+        db.execute(
+            "UPDATE users SET hash = ? WHERE id = ?",
+            generate_password_hash(new_pass),
+            session["user_id"],
+        )
+        flash("Password updated successfully", "success")
+        return redirect("/")
+
+    else:  # GET
+        return render_template("change.html")
 
 
 if __name__ == "__main__":
