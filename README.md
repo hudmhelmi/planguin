@@ -1,55 +1,55 @@
-# 🐧 Planguin - Yet Another Simple Task Manager!
+# 🐧 Planguin - Embrace the Chilly Spirit of Penguins with a Delightful Task Manager!
 
 #### Video Demo: <URL HERE>
 
 ## Project Description
 
-Welcome to Planguin, the coolest task management web application! Planguin is built on the adorable Flask web framework, making it the perfect tool for penguins to organize their daily to-do lists. Our database, fittingly named "planguin.db," stores all the essential penguin information and task data.
+Welcome to Planguin, your coolest task management web application! Planguin is built on the adorable Flask web framework, making it the perfect tool for organizing your daily to-do lists. Our database, fittingly named "planguin.db," stores all your essential task data, ensuring your productivity stays on track.
 
 **Features:**
 
-- **User Accounts:** Penguins can create their accounts and log in to Planguin's icy realm. Secure password hashing ensures that penguin secrets stay safe.
+- **User Accounts:** Create your Planguin account and log in to its icy realm. We value your security, so we use secure password hashing to keep your secrets safe.
 
-- **Chill and Manage Tasks:** Planguin lets penguins add, update, and delete tasks like true taskmaster penguins. Swim through your to-do list in style!
+- **Chill and Manage Tasks:** Like true taskmaster penguins, Planguin lets you add, update, and delete tasks with ease. Swim through your to-do list in style!
 
-- **Waddle Towards Productivity:** Penguins can mark tasks as completed, making them feel like victorious champions.
+- **Waddle Towards Productivity:** Mark tasks as completed and feel like a victorious champion, achieving your goals one task at a time.
 
-- **Seek and Search:** Planguin helps penguins search for their tasks like expert explorers. Never lose track of your fish-catching missions again!
+- **Seek and Search:** Planguin helps you search for your tasks like an expert explorer. Never lose track of your fish-catching missions again!
 
 ## Files for Curious Penguins
 
-1. `app.py`: This is the main Python file that contains the Flask application and all the route handlers. It sets up the web server, connects to the database, and defines various routes for user registration, login, task management, and search. It also handles user authentication using password hashing and session management.
+1. `app.py`: This is the main Python file containing the Flask application and all the route handlers. It sets up the web server, connects to the database, and defines various routes for user registration, login, task management, and search. It also handles user authentication using password hashing and session management.
 
 2. `planguin.db`: This is the SQLite database file that stores user information and task data. It contains two tables, "users" for storing user details and "tasks" for storing task information.
 
 3. `planguin.db.sql`: These are the SQLite commands used to generate `planguin.db`.
 
 4. `templates`: This directory contains HTML templates used for rendering the web pages. It includes the following templates:
-   - `index.html`: The main page that displays the user's tasks, pending and completed.
-   - `login.html`: The login page where users can enter their credentials to log in.
-   - `register.html`: The registration page where users can create a new account.
-   - `change.html`: The page used for changing the username or password.
-   - `layout.html`: The layout containing elements such as a navbar and flashes from which all pages are extended from.
+   - `index.html`: The main page that displays your tasks, both pending and completed.
+   - `login.html`: The login page where you can enter your credentials to access your account.
+   - `register.html`: The registration page where you can create a new account.
+   - `change.html`: The page used for changing your username or password.
+   - `layout.html`: The layout containing elements such as a navbar and flashes, from which all pages are extended.
 
 5. `static`: This directory contains custom styles.
-   - `styles.css`: This contains a variety of styles to customise the look of all the pages on top of the default styles by Bootstrap.
+   - `styles.css`: This contains a variety of styles to customize the look of all the pages, building on the default styles provided by Bootstrap.
 
-## Design Choices - Iceberg Aesthetics
+## Design Choices - Embracing Iceberg Aesthetics
 
-1. **Flask**: Flask is a lightweight and easy-to-use web framework, making it a good choice for this project. It provides the necessary tools for routing, handling HTTP requests, and rendering templates.
+1. **Flask**: We chose Flask as it's a lightweight and easy-to-use web framework, perfect for this project. It provides the necessary tools for routing, handling HTTP requests, and rendering templates.
 
-2. **Bootstrap**: Bootstrap is a framework enabling quick theming of all the pages.
+2. **Bootstrap**: We embraced Bootstrap, enabling quick theming of all the pages and ensuring a consistent and visually appealing experience.
 
-3. **SQLite3**: SQLite3 is used as the database system for its simplicity and self-contained nature. Since this application doesn't require complex data relationships, SQLite is a suitable choice.
+3. **SQLite3**: For its simplicity and self-contained nature, we opted for SQLite3 as the database system. As this application doesn't require complex data relationships, SQLite is a suitable choice.
 
-4. **Password Hashing**: The `generate_password_hash` and `check_password_hash` functions from `werkzeug.security` are used to securely hash and verify user passwords. This ensures that passwords are not stored in plain text and enhances security.
+4. **Password Hashing**: Your security matters to us! We utilize the `generate_password_hash` and `check_password_hash` functions from `werkzeug.security` to securely hash and verify user passwords, ensuring your passwords are never stored in plain text.
 
-5. **Consistent Error Handling**: The application includes error handling for various scenarios, such as empty form fields, duplicate usernames during registration, incorrect passwords during login, and non-existent tasks during updates and deletions.
+5. **Consistent Error Handling**: Planguin includes error handling for various scenarios, such as empty form fields, duplicate usernames during registration, incorrect passwords during login, and non-existent tasks during updates and deletions. A smooth user experience is our priority.
 
-6. **Separation of Concerns**: The code is organized into separate route handlers, which enhances readability and maintainability. Each route handles a specific functionality of the application.
+6. **Separation of Concerns**: The code is organized into separate route handlers, enhancing readability and maintainability. Each route handles a specific functionality of the application, ensuring clarity.
 
-7. **User Interface**: The application utilizes simple HTML templates for the user interface, making it easy to understand and modify.
+7. **User Interface**: We designed simple HTML templates for the user interface, making it easy to understand and modify. A clean and intuitive design is key to a delightful experience.
 
-8. **Dropdown Edit Menus**: Improved user experience by integrating edit forms directly into the task table!
+8. **Dropdown Edit Menus**: To enhance your user experience, we integrated edit forms directly into the task table, making task management even more effortless!
 
 Planguin embraces the chilly spirit of penguins to bring you a user-friendly and delightful task management experience. Let the penguin adventure begin! 🐧❄️
