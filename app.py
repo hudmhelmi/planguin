@@ -268,19 +268,28 @@ def change_user():
             return redirect("/change_user")
 
         # Check if password is valid
-        hash = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]
+        hash = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0][
+            "hash"
+        ]
         if not check_password_hash(hash, password):
             flash("Please enter the correct password.", "error")
             return redirect("/change_user")
 
         # Check if username is taken
-        if db.execute("SELECT username FROM users WHERE username = ?", username)[0]["username"] != 0:
+        if (
+            db.execute("SELECT username FROM users WHERE username = ?", username)[0][
+                "username"
+            ]
+            != 0
+        ):
             flash("Username is already taken.", "error")
             return redirect("/change_user")
 
         # Update username in database
-        db.execute("UPDATE users SET username = ? WHERE id = ?", username, )
-        flash("Task completed successfully", "success")
+        db.execute(
+            "UPDATE users SET username = ? WHERE id = ?", username, session["user_id"]
+        )
+        flash("Username updated successfully", "success")
         return redirect("/")
 
     else:  # GET
