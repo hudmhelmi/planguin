@@ -247,15 +247,23 @@ def search():
     # Return input via URL parameter to index
     return redirect(f"/?search_input={search_input}")
 
+
 # Change username
 @app.route("/change_user", methods=["GET", "POST"])
 def change_user():
     if request.method == "POST":
-        username, password, password_confirmation = request.form.get("username"), request.form.get("password"), request.form.get("password_confirmation")
+        username, password, password_confirmation = (
+            request.form.get("username"),
+            request.form.get("password"),
+            request.form.get("password_confirmation"),
+        )
 
         if not username or not password or not password_confirmation:
             flash("Please fill in all fields.", "error")
             return redirect("/change_user")
+
+    else:  # GET
+        return render_template("change.html")
 
 
 # Change password
