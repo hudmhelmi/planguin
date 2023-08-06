@@ -1,4 +1,4 @@
-# Planguin - Yet Another Simple Task Manager!
+# 🐧 Planguin - Yet Another Simple Task Manager!
 
 #### Video Demo: <URL HERE>
 
@@ -43,6 +43,6 @@ Welcome to Planguin, the coolest task management web application! Planguin is bu
 
 6. **User Interface**: The application utilizes simple HTML templates for the user interface, making it easy to understand and modify.
 
-7. **Dropdown Edit Menus**: Improved user experience by integrating edit forms directly into the table.
+7. **Dropdown Edit Menus**: Improved user experience by integrating edit forms directly into the task table!
 
 Planguin embraces the chilly spirit of penguins to bring you a user-friendly and delightful task management experience. Let the penguin adventure begin! 🐧❄️
