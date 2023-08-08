@@ -1,6 +1,6 @@
 # 🐧 Planguin - A (Very Mildly) Penguin-Themed Task Manager!
 
-#### Video Demo: <URL HERE>
+#### Video Demo: https://youtu.be/bxJTUsxGve0
 
 ## Project Description
 
